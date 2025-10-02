@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ZIMINDIA SHOP</title>
+    <link rel="stylesheet" href="order-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>ZIMINDIA SHOP</span>
+            </div>
+            <button class="global-theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle Theme"><i class="fas fa-sun"></i></button>
+            <div class="checkout-progress">
+                <div class="step completed">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </div>
+                <div class="step active">
+                    <i class="fas fa-user"></i>
+                    <span>Checkout</span>
+                </div>
+                <div class="step">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Payment</span>
+                </div>
+            </div>
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Checkout</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="checkout-container">
+            <div class="checkout-left">
+                <!-- Delivery Address -->
+                <section class="section premium-container delivery-section">
+                    <div class="section-header premium-header">
+                        <div class="section-number neon-number">1</div>
+                        <h2><i class="fas fa-map-marker-alt gradient-icon"></i> Delivery Address</h2>
+                        <button class="edit-btn premium-edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                    </div>
+                    <form class="address-form premium-form" novalidate>
+                        <div class="form-row premium-row">
+                            <div class="form-group premium-input-group">
+                                <label><i class="fas fa-user"></i> Full Name*</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter your full name" required>
+                                    <i class="fas fa-id-card input-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group premium-input-group">
+                                <label><i class="fas fa-phone"></i> Phone Number*</label>
+                                <div class="input-group">
+                                    <input type="tel" placeholder="+1 (555) 123-4567" required>
+                                    <i class="fas fa-mobile-alt input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group premium-input-group full-width">
+                            <label><i class="fas fa-envelope"></i> Email Address*</label>
+                            <div class="input-group">
+                                <input type="email" placeholder="your.email@example.com" required>
+                                <i class="fas fa-at input-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group premium-input-group full-width">
+                            <label><i class="fas fa-home"></i> Street Address*</label>
+                            <div class="input-group">
+                                <input type="text" placeholder="House no., Building, Street name" required>
+                                <i class="fas fa-map-pin input-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-row premium-row">
+                            <div class="form-group premium-input-group">
+                                <label><i class="fas fa-city"></i> City*</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter city" required>
+                                    <i class="fas fa-building input-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group premium-input-group">
+                                <label><i class="fas fa-flag"></i> State*</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter state" required>
+                                    <i class="fas fa-map input-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group premium-input-group">
+                                <label><i class="fas fa-mail-bulk"></i> ZIP Code*</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="12345" required>
+                                    <i class="fas fa-hashtag input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="segmented-toggle" role="radiogroup" aria-label="Address type">
+                            <label class="segment">
+                                <input type="radio" name="addressType" value="home" checked aria-label="Home Address">
+                                <span class="segment-label"><i class="fas fa-home"></i> Home</span>
+                            </label>
+                            <label class="segment">
+                                <input type="radio" name="addressType" value="office" aria-label="Office Address">
+                                <span class="segment-label"><i class="fas fa-briefcase"></i> Office</span>
+                            </label>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Order Summary Items -->
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2>Review Items</h2>
+                    </div>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' font-size='30' text-anchor='middle' dy='.3em' fill='%234CAF50'%3E🪣%3C/text%3E%3C/svg%3E" alt="Premium Bucket">
+                            <div class="item-details">
+                                <h3>Premium Bucket</h3>
+                                <p>Size: Large | Color: Blue</p>
+                                <div class="quantity-control">
+                                    <button type="button" onclick="adjustQuantity(-1)" aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1" min="1" aria-label="Quantity for Premium Bucket">
+                                    <button type="button" onclick="adjustQuantity(1)" aria-label="Increase quantity">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span class="price">$29.99</span>
+                                <button class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' font-size='30' text-anchor='middle' dy='.3em' fill='%231f6f8b'%3E☕%3C/text%3E%3C/svg%3E" alt="Designer Mug">
+                            <div class="item-details">
+                                <h3>Designer Mug</h3>
+                                <p>Size: 300ml | Color: White</p>
+                                <div class="quantity-control">
+                                    <button type="button" onclick="adjustQuantity(-1)" aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="2" min="1" aria-label="Quantity for Designer Mug">
+                                    <button type="button" onclick="adjustQuantity(1)" aria-label="Increase quantity">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span class="price">$29.98</span>
+                                <button class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Delivery Options -->
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2>Delivery Options</h2>
+                    </div>
+                    <div class="delivery-options">
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="standard" checked>
+                            <div class="option-content">
+                                <div class="option-info">
+                                    <strong>Standard Delivery</strong>
+                                    <p>5-7 business days</p>
+                                </div>
+                                <div class="option-price">FREE</div>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="express">
+                            <div class="option-content">
+                                <div class="option-info">
+                                    <strong>Express Delivery</strong>
+                                    <p>2-3 business days</p>
+                                </div>
+                                <div class="option-price">$9.99</div>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="overnight">
+                            <div class="option-content">
+                                <div class="option-info">
+                                    <strong>Overnight Delivery</strong>
+                                    <p>Next business day</p>
+                                </div>
+                                <div class="option-price">$19.99</div>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="checkout-right">
+                <div class="order-summary-card">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-items">
+                        <div class="summary-row">
+                            <span>Items (3)</span>
+                            <span>$59.97</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery</span>
+                            <span class="free">FREE</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$5.10</span>
+                        </div>
+                        <div class="summary-row discount">
+                            <span>Discount</span>
+                            <span>-$5.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="total-section">
+                        <div class="total-row">
+                            <strong>Order Total: <span>$60.07</span></strong>
+                        </div>
+                        <p class="savings">You saved $5.00 on this order</p>
+                    </div>
+                    
+                    <button type="button" class="place-order-btn premium-order-button">
+                        <i class="fas fa-lock"></i>
+                        <span class="button-text">PLACE YOUR ORDER NOW</span>
+                        <div class="button-shine"></div>
+                    </button>
+                    
+                    <!-- Secondary Order Button -->
+                    <button type="button" class="secondary-order-btn" onclick="document.querySelector('.place-order-btn').click()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Complete Purchase
+                    </button>
+                    
+                    <div class="secure-checkout">
+                        <p><i class="fas fa-shield-alt"></i> Your order is secured with SSL encryption</p>
+                    </div>
+                    
+                    <div class="promo-section">
+                        <h4>Have a promo code?</h4>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Enter code">
+                            <button>Apply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="delivery-info">
+                    <h4><i class="fas fa-truck"></i> Delivery Information</h4>
+                    <div class="delivery-details">
+                        <p><strong>Estimated Delivery:</strong> Oct 5-7, 2025</p>
+                        <p><strong>Delivery to:</strong> 12345</p>
+                        <p><i class="fas fa-check-circle"></i> Free returns within 30 days</p>
+                        <p><i class="fas fa-check-circle"></i> 2-year warranty included</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message hidden" aria-live="polite" role="status">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Order Placed Successfully!</h3>
+                    <p>Thank you for your order. We'll send you a confirmation email shortly.</p>
+                    <div class="order-details">
+                        <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+                        <p><strong>Estimated Delivery:</strong> <span id="estimatedDelivery"></span></p>
+                    </div>
+                    <button onclick="resetForm()" class="new-order-btn">
+                        <i class="fas fa-plus"></i> Place Another Order
+                    </button>
+                </div>
+            </div>
+        
+        <!-- Mobile Sticky Summary Bar -->
+        <div class="sticky-checkout-bar" role="region" aria-label="Mobile order summary">
+            <div class="sticky-total">
+                <span class="label">Total</span>
+                <span class="value" id="stickyTotal">$60.07</span>
+            </div>
+            <button type="button" class="sticky-place-btn" aria-label="Place your order" onclick="document.querySelector('.place-order-btn')?.click()">
+                <i class="fas fa-lock"></i><span>Order</span>
+            </button>
+        </div>
+        </main>
+
+        <!-- Next-Gen Footer -->
+        <footer class="nextgen-footer" id="site-footer" data-theme="light">
+            <button class="footer-theme-toggle" type="button" aria-label="Toggle footer dark mode" title="Toggle Footer Theme"><i class="fas fa-moon"></i></button>
+            <div class="footer-upper">
+                <div class="footer-brand">
+                    <div class="brand-mark">
+                        <span class="brand-icon"><i class="fas fa-cubes"></i></span>
+                        <div class="brand-text">
+                            <h3>ZIMINDIA SupplyChain</h3>
+                            <p class="tagline">Operational Intelligence • Academic Precision</p>
+                        </div>
+                    </div>
+                    <div class="footer-metrics">
+                        <div class="metric">
+                            <div class="metric-number" data-count="99.99">99.99%</div>
+                            <div class="metric-label">Uptime</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number" data-count="2300000">2.3M+</div>
+                            <div class="metric-label">Tracked Items</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number grow" data-count="48">48%</div>
+                            <div class="metric-label">Throughput Gain</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number" data-count="12">12</div>
+                            <div class="metric-label">Data Pipelines</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-block">
+                        <h4 class="block-title"><i class="fas fa-sitemap"></i> Platform Layers</h4>
+                        <ul class="link-list">
+                            <li>Acquisition & Ingestion</li>
+                            <li>Normalization Engine</li>
+                            <li>Routing & Allocation</li>
+                            <li>Exception Resolution</li>
+                            <li>Analytics & Reporting</li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4 class="block-title"><i class="fas fa-database"></i> Data Structures</h4>
+                        <div class="chip-row">
+                            <span class="chip">Stacks</span>
+                            <span class="chip">Queues</span>
+                            <span class="chip">Heaps</span>
+                            <span class="chip">Graphs</span>
+                            <span class="chip">Hash Maps</span>
+                        </div>
+                        <h5 class="subheading">Performance Focus</h5>
+                        <div class="progress-group">
+                            <div class="progress-line"><span>Latency</span><div class="bar"><div style="width:92%"></div></div></div>
+                            <div class="progress-line"><span>Throughput</span><div class="bar"><div style="width:87%"></div></div></div>
+                            <div class="progress-line"><span>Scalability</span><div class="bar"><div style="width:90%"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <h4 class="block-title"><i class="fas fa-laptop-code"></i> Tech Stack</h4>
+                        <div class="pill-grid">
+                            <span class="pill">HTML5</span>
+                            <span class="pill">CSS3</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">REST</span>
+                            <span class="pill">JSON</span>
+                        </div>
+                        <h5 class="subheading">Build Quality</h5>
+                        <div class="rating-row">
+                            <div class="rating"><span>Reliability</span><div class="stars" data-stars="5"></div></div>
+                            <div class="rating"><span>Maintainability</span><div class="stars" data-stars="4.5"></div></div>
+                        </div>
+                    </div>
+                    <div class="footer-block team-block">
+                        <h4 class="block-title"><i class="fas fa-users-cog"></i> Development Team</h4>
+                        <div class="team-grid">
+                            <div class="team-card"><div class="avatar">TP</div><div class="t-meta"><strong>TANVI PATIL</strong><small>Backend Systems</small></div></div>
+                            <div class="team-card"><div class="avatar">NF</div><div class="t-meta"><strong>NOORYEN FARAS</strong><small>Queue Architect</small></div></div>
+                            <div class="team-card"><div class="avatar">CRM</div><div class="t-meta"><strong>CHRISTIAN R</strong><small>Data Structures</small></div></div>
+                            <div class="team-card"><div class="avatar">ZI</div><div class="t-meta"><strong>ZIMINDIA TEAM</strong><small>UX / Frontend</small></div></div>
+                        </div>
+                        <div class="team-ribbon">Academic Project • Vishwakarma University</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-lower">
+                <div class="compliance">
+                    <div class="badge"><i class="fas fa-lock"></i> ISO-ready Architecture</div>
+                    <div class="badge"><i class="fas fa-shield-alt"></i> Integrity Monitored</div>
+                    <div class="badge"><i class="fas fa-chart-line"></i> SLA Tracked</div>
+                </div>
+                <div class="social-cluster">
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="legal-inline">
+                    <span>&copy; 2025 ZIMINDIA SHOP</span>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                    <a href="#">Docs</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Order Button (Failsafe) -->
+    <div class="floating-order-container">
+        <button class="floating-order-btn" onclick="scrollToOrderButton()">
+            <i class="fas fa-shopping-cart"></i>
+            <span>ORDER NOW</span>
+            <div class="floating-pulse"></div>
+        </button>
+    </div>
+
+    <script src="order-script.js"></script>
+    
+    <script>
+        // Ensure order button is visible
+        function scrollToOrderButton() {
+            const orderButton = document.querySelector('.place-order-btn');
+            if (orderButton) {
+                orderButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Add attention effect
+                orderButton.style.animation = 'attentionBounce 1s ease-out';
+                setTimeout(() => {
+                    orderButton.style.animation = '';
+                }, 1000);
+            } else {
+                alert('Order button not found! Please refresh the page.');
+            }
+        }
+        
+        // Check if main order button is visible on load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const orderButton = document.querySelector('.place-order-btn');
+                if (orderButton) {
+                    console.log('Order button found and visible!');
+                    orderButton.style.background = 'linear-gradient(135deg, #ff9f00, #ff6b00)';
+                    orderButton.style.display = 'flex';
+                    orderButton.style.visibility = 'visible';
+                    orderButton.style.opacity = '1';
+                } else {
+                    console.warn('Order button not found!');
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
